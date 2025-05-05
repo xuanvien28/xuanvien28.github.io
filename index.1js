@@ -1,0 +1,80 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const sql = require('mssql');
+const path = require('path');
+
+const app = express();
+const port = 3000;
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public')); // Để phục vụ file HTML
+
+// // Cấu hình kết nối SQL Server
+// const config = {
+//   user: 'sa',               // Thay bằng user của bạn
+//   password: '123456', // Thay bằng password
+//   server: 'DESKTOP-1KV7QIS',       // hoặc tên server
+//   database: 'QLBH',   // Thay bằng tên database của bạn
+//   options: {
+//     trustServerCertificate: true,
+//     enableArithAbort: true
+//   }
+// };
+
+
+
+const config = {
+  user: 'sa',
+  password: '123456',
+  server: 'DESKTOP-1KV7QIS',
+  database: 'QLBH',
+  options: {
+    trustServerCertificate: true,
+    enableArithAbort: true
+  }
+};
+
+async function testConnection() {
+  try {
+    const pool = await sql.connect(config);
+    console.log('✅ Kết nối thành công đến SQL Server!');
+    await pool.close(); // đóng sau khi kết nối ok
+  } catch (err) {
+    console.error('❌ Kết nối thất bại:', err.message);
+  }
+}
+
+testConnection();
+
+
+
+// // Route GET để mở trang đăng nhập
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'login.html'));
+// });
+
+// // Route POST để xử lý đăng nhập
+// app.post('/login', async (req, res) => {
+//   const { username, password } = req.body;
+
+//   try {
+//     await sql.connect(config);
+//     const result = await sql.query`SELECT * FROM TAIKHOAN WHERE username = ${username} AND password = ${password}`;
+
+
+//     if (result.recordset.length > 0) {
+//       res.send('Đăng nhập thành công!');
+//     } else {
+//       res.send('Sai tài khoản hoặc mật khẩu!');
+//     }
+//   } catch (err) {
+//     console.error('Lỗi truy vấn:', err);
+//     res.send('Có lỗi xảy ra khi kết nối database');
+//   }
+// });
+
+// // Khởi động server
+// app.listen(port, () => {
+//   console.log(`Server đang chạy tại http://localhost:${port}`);
+// });
