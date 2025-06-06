@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .custom-login-wrapper {
+      background: #fff;
+      padding: 40px 35px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .login-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s;
+    }
+
+    .login-input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .login-button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-button:hover {
+      background-color: #0056b3;
+    }
+
+    .error-text {
+      color: red;
+      font-size: 13px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="custom-login-wrapper">
+    <form action="/login" method="POST" class="login-form">
+      <h2 class="login-title">Đăng nhập hệ thống</h2>
+
+      <label for="username" class="login-label">Tài khoản</label>
+      <input type="text" id="username" name="username" class="login-input" required value="{{username}}">
+
+      <label for="password" class="login-label">Mật khẩu</label>
+      <input type="password" id="password" name="password" class="login-input" required value="{{password}}">
+
+      {{#if error}}
+        <p class="error-text">{{error}}</p>
+      {{/if}}
+
+      <button type="submit" class="login-button">Đăng nhập</button>
+    </form>
+  </div>
+
+</body>
+</html>

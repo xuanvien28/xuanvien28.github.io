@@ -1,0 +1,31 @@
+<!-- Trong layout hoặc header.hbs -->
+<body style="padding-top: 56px;"></body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 fixed-top">
+  <a class="navbar-brand" href="#">
+      <img src="../../img/logo.webp" alt="Logo" style="height: 40px;">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="/private/homeUser">Trang chủ</a></li>
+      <li class="nav-item"><a class="nav-link" href="/private/introduceUser">Giới thiệu</a></li>
+      <li class="nav-item"><a class="nav-link" href="/private/newsUser">Bản đồ</a></li>
+      <li class="nav-item"><a class="nav-link" href="/private/contactUser">Liên hệ và hỗ trợ</a></li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      {{#if user}}
+        <li class="nav-item">
+          <span class="navbar-text text-white mr-3">{{user.username}}</span>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light" href="/private/logout">Đăng xuất</a>
+        </li>
+      {{else}}
+        <li class="nav-item">
+          <a class="btn btn-outline-light" href="/login">Đăng nhập</a>
+        </li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>

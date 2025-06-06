@@ -1,0 +1,58 @@
+@charset "UTF-8";
+.custom-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.login-form {
+  width: 320px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-input {
+  width: 50% !important; /* tránh Bootstrap ghi đè */
+  padding: 8px !important;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=login.css.map */

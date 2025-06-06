@@ -1,0 +1,245 @@
+@charset "UTF-8";
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.lienhe {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.lienhe h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.form-lienhe {
+  margin-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
+}
+
+button {
+  padding: 12px;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.tintuc {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 20px; /* thêm khoảng cách giữa các mục */
+  flex-wrap: wrap; /* nếu muốn responsive */
+}
+
+.tintuc-chitiet {
+  width: 30%;
+  font-size: 16px; /* giảm để cân đối với bố cục */
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.tintuc-chitiet img {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+.tintuc-chitiet h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.custom-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.login-form {
+  width: 320px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-input {
+  width: 50% !important; /* tránh Bootstrap ghi đè */
+  padding: 8px !important;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.lienhe {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.lienhe h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.form-lienhe {
+  margin-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
+}
+
+button {
+  padding: 12px;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+h1 {
+  color: red;
+}
+
+/*# sourceMappingURL=app.css.map */

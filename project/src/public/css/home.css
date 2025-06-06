@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.tintuc {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 20px; /* thêm khoảng cách giữa các mục */
+  flex-wrap: wrap; /* nếu muốn responsive */
+}
+
+.tintuc-chitiet {
+  width: 30%;
+  font-size: 16px; /* giảm để cân đối với bố cục */
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.tintuc-chitiet img {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+.tintuc-chitiet h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,163 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .main-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .container {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 20px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    padding: 12px 16px;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  /* Màu sắc theo từng nhóm */
+  .luoi {
+    background: #007bff;
+  }
+
+  .tram {
+    background: #28a745;
+  }
+
+  .phutai {
+    background: #ffc107;
+    color: #212529;
+  }
+
+  /* Submenu styles */
+  .submenu button {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
+  }
+
+  .submenu.luoi button {
+    background-color: #004085;
+    color: #fff;
+  }
+
+  .submenu.luoi button:hover {
+    background-color: #003366;
+  }
+
+  .submenu.tram button {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  .submenu.tram button:hover {
+    background-color: #a8d5a3;
+  }
+
+  .submenu.phutai button {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+
+  .submenu.phutai button:hover {
+    background-color: #ffe8a1;
+  }
+
+  .submenu.extra button {
+    background-color: #6c757d;
+    color: #fff;
+  }
+
+  .submenu.extra button:hover {
+    background-color: #5a6268;
+  }
+
+  .map-wrapper {
+    flex: 1;
+    min-width: 600px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  .map-wrapper iframe {
+    width: 100%;
+    height: 750px;
+    border: none;
+  }
+</style>
+
+<div class="main-wrapper">
+  <!-- Cột chức năng -->
+  <div class="container">
+    <!-- Quản lý lưới điện -->
+    <div class="section">
+      <div class="title luoi">Quản lý lưới điện</div>
+      <div class="submenu luoi">
+        <button>Thêm</button>
+        <button>Sửa</button>
+        <button>Xóa</button>
+      </div>
+    </div>
+
+    <!-- Quản lý trạm biến áp -->
+    <div class="section">
+      <div class="title tram">Quản lý trạm biến áp</div>
+      <div class="submenu tram">
+        <button>Thêm</button>
+        <button>Sửa</button>
+        <button>Xóa</button>
+      </div>
+    </div>
+
+    <!-- Quản lý phụ tải -->
+    <div class="section">
+      <div class="title phutai">Quản lý phụ tải</div>
+      <div class="submenu phutai">
+        <button>Thêm</button>
+        <button>Sửa</button>
+        <button>Xóa</button>
+      </div>
+    </div>
+
+    <!-- Các chức năng khác -->
+    <div class="section">
+      <div class="submenu extra">
+        <button>Kiểm tra lưới điện</button>
+        <button>Thống kê danh mục thiết bị</button>
+        <button>Báo cáo thống kê cho quản lý</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cột bản đồ -->
+  <div class="map-wrapper">
+    <iframe src="../gis/map/index.html"></iframe>
+  </div>
+</div>
